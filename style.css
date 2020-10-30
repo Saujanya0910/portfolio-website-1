@@ -179,19 +179,13 @@ img{
     cursor: pointer;
 }
 
-#work .content .workBx:hover{
+/* #work .content .workBx:hover{
     background: #2196f3;
-}
+} */
 
 #work .content .workBx img{
-    max-width: 80px;
-    /* filter: invert(1); */
-    padding-bottom: 20px;
-}
-
-#work .content .workBx:hover .overlay{
-    background: #2196f3;
-    opacity: 1;
+    width: 100%;
+    /* padding-bottom: 20px; */
 }
 
 .other-proj {

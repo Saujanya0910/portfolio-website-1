@@ -266,18 +266,33 @@ img{
 #contact .content{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 #contact .content .contactBx {
-    max-width: calc(50% - 40px);
-    padding: 60px 40px;
-    margin: 20px;
+    max-width: 40%;
+    padding: auto;
+    margin: 40px;
     background: #2196f3;
+    border-radius: 50%;
 }
 
-#contact .content .contactBx p{
+#contact .content .contactBx .contact-icon{
     color: #ffffff;
+}
+
+.contactBx .contact-icon i{
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+#contact .content .contactBx:hover {
+    background-color: #0763ae;
+}
+
+#contact .content .contactBx {
+    padding: 25px;
 }
 
 #footer {
@@ -361,8 +376,12 @@ img{
     }
 
     #contact .content .contactBx {
-        max-width: calc(100% - 40px);
-        padding: 40px 20px;
+        margin: 15px;
+        padding: 25px;
+    }
+
+    .contactBx .contact-icon i{
+        font-size: 2.5rem;
     }
 
     #footer .copyright {

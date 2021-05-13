@@ -169,6 +169,7 @@ img{
 }
 
 #work .content .workBx{
+    position: relative;
     padding: 40px 20px;
     background: #222;
     color: #ffffff;
@@ -176,22 +177,51 @@ img{
     margin: 20px;
     text-align: center;
     transition: 0.5s;
+    /* cursor: pointer; */
+}
+
+.workBx .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
     cursor: pointer;
 }
 
-#work .content .workBx:hover{
-    background: #2196f3;
+.workBx:hover img {
+    opacity: 0.1;
+}
+  
+.workBx:hover .middle {
+    opacity: 1;
+}
+
+.middle .text {
+    background-color: #2196f3;
+    font-size: 1.25rem;
+    padding: 16px 20px;
+}
+
+.middle .text:hover {
+    text-decoration: underline;
+}
+
+.middle .text a {
+    color: white;
+    text-decoration: none !important;
 }
 
 #work .content .workBx img{
-    max-width: 80px;
-    /* filter: invert(1); */
-    padding-bottom: 20px;
-}
-
-#work .content .workBx:hover .overlay{
-    background: #2196f3;
-    opacity: 1;
+    width: 100%;
+    display: block;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    /* padding-bottom: 20px; */
 }
 
 .other-proj {
@@ -233,33 +263,32 @@ img{
     transition: 0.75s;
 }
 
-.text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 #contact .content{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 #contact .content .contactBx {
-    max-width: calc(50% - 40px);
-    padding: 60px 40px;
-    margin: 20px;
-    background: #2196f3
+    max-width: 40%;
+    padding: 30px;
+    margin: 40px;
+    background: #2196f3;
+    border-radius: 50%;
 }
 
-#contact .content .contactBx p{
+#contact .content .contactBx:hover {
+    background-color: #0763ae;
+}
+
+.contactBx .contact-icon{
     color: #ffffff;
+}
+
+.contactBx .contact-icon i{
+    color: #ffffff;
+    font-size: 2.5rem;
 }
 
 #footer {
@@ -276,7 +305,7 @@ img{
     padding: 40px 0;
 }
 
-/* Responsive */
+/* Responsive media queries*/
 
 @media (max-width: 768px)
 {
@@ -343,8 +372,12 @@ img{
     }
 
     #contact .content .contactBx {
-        max-width: calc(100% - 40px);
-        padding: 40px 20px;
+        margin: 15px;
+        padding: 25px;
+    }
+
+    .contactBx .contact-icon i{
+        font-size: 2.5rem;
     }
 
     #footer .copyright {

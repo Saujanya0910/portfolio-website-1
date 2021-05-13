@@ -113,6 +113,12 @@ header ul li a{
     text-decoration: none;
 }
 
+header ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.4s;
+}
+
 .heading{
     width: 100%;
     text-align: center;

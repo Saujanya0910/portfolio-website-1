@@ -113,6 +113,12 @@ header ul li a{
     text-decoration: none;
 }
 
+header ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.4s;
+}
+
 .heading{
     width: 100%;
     text-align: center;
@@ -129,10 +135,7 @@ header ul li a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.contentBx{
-    padding-right: 30px; 
+    justify-content: center;
 }
 
 .contentBx h3{
@@ -146,6 +149,7 @@ header ul li a{
 
 .w50{
     min-width: 50%;
+    text-align: center;
 }
 
 img{
@@ -173,7 +177,7 @@ img{
     padding: 40px 20px;
     background: #222;
     color: #ffffff;
-    max-width: 400px;
+    max-width: 500px;
     margin: 20px;
     text-align: center;
     transition: 0.5s;
@@ -203,7 +207,7 @@ img{
 
 .middle .text {
     background-color: #2196f3;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     padding: 16px 20px;
 }
 
@@ -214,6 +218,11 @@ img{
 .middle .text a {
     color: white;
     text-decoration: none !important;
+}
+
+.middle .text a i{
+    margin: 0 7.5px;
+    font-size: 1.5rem;
 }
 
 #work .content .workBx img{
